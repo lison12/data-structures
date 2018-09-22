@@ -26,7 +26,7 @@ treeMethods.contains = function(target, node) {
   //check if there any children
   if (node.children.length > 0) {
     for (var i = 0; i < node.children.length; i++) {
-      result = this.contains(target, node.children[i]);
+      result = node.contains(target, node.children[i]);
       if (result === true) {
         return result;
       }
@@ -41,5 +41,6 @@ treeMethods.contains = function(target, node) {
 
 
 /*
- * Complexity: What is the time complexity of the above functions?
+ * Complexity: What is the time complexity of the above functions?    
+    Linear time complexity O(n)
  */
